@@ -13,19 +13,19 @@
     <header>
         <nav class="nav">
             <h1>Portfolio</h1>
-            <ul>
+            <ul class="nav-btns">
                 <li>Home</li>
                 <li>About Me</li>
                 <li>Skills</li>
                 <li>Projects</li>
                 <li>Contact Us</li>
             </ul>
-            <ul>
-                <li><i class="ri-sun-line"></i></li> 
-                <!-- <i class="ri-contrast-2-line"></i> -->
-                <li><i class="ri-share-line"></i></li>
-                <!-- <li><i class="ri-menu-4-line"></i></li> -->
-            </ul>
+            <div class="icons">
+                <i class="ri-contrast-2-line dark-icon"></i>
+                <i class="ri-sun-line sun-icon"></i>
+                <i class="ri-share-line share-icon"></i>
+                <i class="ri-menu-4-line menu-icon"></i>
+            </div>
         </nav>
 
         <section class="left-right">
@@ -35,19 +35,19 @@
                     <span><h1>Vivek Kumar Maurya</h1></span>
                     <p>Exploring the infinite possibilities of the digital world <br>
                         Frontend Developer & Aspiring Full Stack Developer</p>
-                    <button>Resume</button>
+                    <button class="resume-btn"> <i class="ri-download-2-line"></i> Resume</button>
                 </div>
             </div>
             <div class="right">
                 <img src="/media/photo1.png" alt="">
-                <div class="contact-icons">
+                <div class="welcome-msg">
                     <ul>
                         <div class="line"></div>
-                        <li>we</li>
-                        <li>go</li>
-                        <li>in</li>
-                        <li>on</li>
-                        <li>it</li>
+                        <li>i'm</li>
+                        <li>glad</li>
+                        <li>you</li>
+                        <li>are</li>
+                        <li>here</li>
                     </ul>
                 </div>
             </div>
@@ -77,24 +77,40 @@
     <section class="projects">
         <h1>Projects</h1>
         <h2>HTML & CSS</h2>
-        <div class="carousel-container">
+        <div class="carousel-container html-css">
           <button class="carousel-btn left-btn html-css-left">&lt;</button>
           <div class="carousel-slide html-css-slide">
             <div class="carousel-item">
               <img src="/media/html-css/resposive-page.png" alt="Project 1 Screenshot">
               <p>My first complete landing page,<br> Fully responsive on every screen size.</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
             <div class="carousel-item">
               <img src="/media/html-css/amzn-clone.png" alt="Project 2 Screenshot">
               <p>Amazon landing page clone.</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
             <div class="carousel-item">
               <img src="/media/html-css/clean-ui.png" alt="Project 3 Screenshot">
               <p>A simple clean UI landing page.</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
             <div class="carousel-item">
               <img src="/media/html-css/portfolio-templete.png" alt="Project 4 Screenshot">
               <p>A simple portfolio templete.</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
           </div>
           <button class="carousel-btn right-btn html-css-right">&gt;</button>
@@ -102,24 +118,56 @@
         </div>
 
         <h2>JavaScript</h2>
-        <div class="carousel-container">
+        <div class="carousel-container js">
           <button class="carousel-btn left-btn js-left">&lt;</button>
           <div class="carousel-slide js-slide">
             <div class="carousel-item">
+              <img src="/media/javascript/music-player.png" alt="Project 1 Screenshot">
+              <p>A simple music-player fetch media from an array of objects </p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
+            </div>
+            <div class="carousel-item">
               <img src="/media/javascript/weather-checker.png" alt="Project 1 Screenshot">
               <p>A realtime weather checker using city name <br> Used API - Openweathermap</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
             <div class="carousel-item">
               <img src="/media/javascript/pass-generator.png" alt="Project 2 Screenshot">
               <p>Random strong password generator.</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
             <div class="carousel-item">
               <img src="/media/javascript/quiz-app.png" alt="Project 3 Screenshot">
               <p>A functioning quiz app withFour fun questions  <br> see how much you can score!</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
             <div class="carousel-item">
               <img src="/media/javascript/simple-todo.png" alt="Project 4 Screenshot">
               <p>A Cool To-Do app that keeps track of your tasks </p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="/media/javascript/notes-app.png" alt="Project 1 Screenshot">
+              <p>A notes app where you can add delete edit update notes easily</p>
+              <div class="overlay">
+                <button class="open-project">Open Project</button>
+                <button class="github-link">GitHub</button>
+              </div>
             </div>
           </div>
           <button class="carousel-btn right-btn js-right">&gt;</button>
@@ -132,15 +180,15 @@
 
         <div class="contact-me">
           <div class="contact-details">
-            <div class="contact-item">
+            <div class="contact-item" onclick="sendMail()">
               <i class="ri-mail-line"></i>
-              <span>ivandan@email.com</span>
+              <span>vivekmaurya9612@email.com</span>
             </div>
-            <div class="contact-item">
+            <div class="contact-item" onclick="linkedinProfile()">
               <i class="ri-linkedin-box-fill"></i>              
               <span>Vivek Kumar Maurya</span>
             </div>
-            <div class="contact-item">
+            <div class="contact-item" onclick="githubProfile()">
               <i class="ri-github-fill"></i>              
               <span>@vivek-java-dev</span>
             </div>
@@ -149,48 +197,6 @@
         <h2>" Thanks for visiting "</h2>
       </footer>
       
-      
+      <script src="script.js"></script>
 </body>
-<script>
-
-// ******* Carousal********
-function initCarousel(slideSelector, leftBtnSelector, rightBtnSelector,counterSelector) {
-  const slide = document.querySelector(slideSelector);
-  const leftBtn = document.querySelector(leftBtnSelector);
-  const rightBtn = document.querySelector(rightBtnSelector);
-  const items = slide.querySelectorAll('.carousel-item');
-  const span  = document.querySelector(counterSelector)
-
-  let currentIndex = 0;
-  const totalItems = items.length;
-
-  leftBtn.addEventListener('click', () => {
-    if (currentIndex === 0) {
-      currentIndex = totalItems - 1;
-    } else {
-      currentIndex--;
-    }
-    updateCarousel();
-  });
-
-  rightBtn.addEventListener('click', () => {
-    if (currentIndex === totalItems - 1) {
-      currentIndex = 0;
-    } else {
-      currentIndex++;
-    }
-    updateCarousel();
-  });
-
-  function updateCarousel() {
-    slide.style.transform = `translateX(-${currentIndex * 100}%)`;
-    span.style.display = 'initial'
-    span.innerHTML = `${currentIndex+1}/${totalItems}`
-  }
-}
-
-initCarousel('.html-css-slide', '.html-css-left', '.html-css-right','.html-css-span');
-initCarousel('.js-slide', '.js-left', '.js-right','.js-span');
-
-  </script>
 </html>

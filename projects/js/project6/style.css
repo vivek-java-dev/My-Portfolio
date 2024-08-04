@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Saudagar' , sans-serif ;
+    box-sizing: border-box;
+}
+
+
+@font-face{
+    font-family: 'AestheticMonoline';
+    src: url("/Fonts/aesthetic_monoline/AestheticMonoline.ttf");
+}
+
+@font-face{
+    font-family: 'Philosopher';
+    src: url("/Fonts/Philosopher-Italic.ttf");
+}
+@font-face{
+    font-family: 'Saudagar';
+    src: url("/Fonts/Saudagar.ttf");
+}
+
+body{
+    height: 43rem;
+    width: 100%;
+    background: #081C15;
+}
+#card{
+    background-color: #B7E4C7;
+    height: 90%;width: 40%;
+    margin: 80px auto ;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 550px;
+}
+#logo-img{
+    height: 50px;
+    display:initial;
+    margin-right: 20px;
+}
+#app-name{
+    color: #1B4332;
+    font-size: 50px;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+    border-bottom: 2px dotted black;
+    font-family: 'AestheticMonoline';
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+.buttons{
+    font-family: 'Philosopher';
+    letter-spacing: 1.5px;
+    font-size: 24px;
+    font-weight: 200;
+    border: none;
+    outline:none;
+    background-color: #1B4332;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+#new-note-form{
+    background-color: #D8F3DC;
+    color: black;
+    padding: 10px;
+    width: 90%;
+    border-radius: 20px;
+    margin-top: 30px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+}
+#title-box{
+    border: none;
+    outline: none;
+    background-color: #D8F3DC;
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: 3px;
+    width: 80%;
+}
+#note-content{
+    background-color: #D8F3DC;
+    color: black;
+    padding: 10px;
+    border-radius: 20px;
+    border: 1px solid #1B4332;
+    margin-top: 30px;
+    height: auto;
+    display: none;
+}
+#note-textarea{
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 22px;
+    padding: 15px;    
+    overflow: scroll;
+    resize:inherit;
+    height: 325px;
+    width: 100%;
+}
+
+#notes-list{
+    background-color: #40916C;
+    margin-top: 20px;
+    display: none;
+    flex-direction: column;
+    border: 2px solid #1B4332;
+    border-radius: 20px;
+    height: auto;
+    max-height: 380px;
+    overflow:scroll;
+
+}
+
+.note{
+    background-color: #D8F3DC;
+    margin: 20px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    font-size:32px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.note span{
+    padding-right: 10px;
+    cursor: pointer;
+}
+.inner-note{
+    width: 80%;
+}
+::-webkit-scrollbar {
+    width: 8px; 
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+    border-radius: 10px; 
+}
+::-webkit-scrollbar-thumb {
+    background: #081C15; 
+    border-radius: 10px; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #B7E4C7; 
+}
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+

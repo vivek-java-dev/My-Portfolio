@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="music-player">
+            <nav>
+                <div class="circle"><i class="ri-arrow-left-s-line"></i></div>
+                <div class="circle"><i class="ri-menu-3-line"></i></div>
+            </nav>
+            <div class=" music-img"></div>
+            <h1 id="song-title">Shape of you</h1>
+            <p id="artist-name">Ed sheeran</p>
+
+            <audio  id="song">
+                <source src = "Media/Shape-Of-You(PagalNew.Com.Se).mp3" type="audio/mpeg">
+            </audio>
+            <input type="range" id="progress">
+
+            <div class="controls">
+                <div><i class="ri-skip-left-fill"></i></div>
+                <div  onclick="playPause()"><i class="ri-play-fill" id="ctrl-icon"></i></div>  
+                <div><i class="ri-skip-right-fill"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let progress = document.getElementById('progress')
+        let song = document.getElementById('song')
+        let ctrlIcon = document.getElementById('ctrl-icon')
+        let songTitle = document.getElementById('song-title');
+        let artistName = document.getElementById('artist-name');
+        const prevButton = document.querySelector('.controls div:nth-child(1)');
+        const nextButton = document.querySelector('.controls div:nth-child(3)');
+             
+        const songs = [
+            {
+                title: "Shape of You",
+                artist: "Ed Sheeran",
+                src: "Media/Shape-Of-You(PagalNew.Com.Se).mp3"
+            },
+            {
+                title: "Closer",
+                artist: "chainsmokers",
+                src: "Media/Closer(PagalNew.Com.Se).mp3"
+            },
+            {
+                title: "Ainsi Bas La Vida",
+                artist: "Indila",
+                src: "Media/Ainsi Bas La Vida - Indila-(DJMaza).mp3"
+            }
+        ];
+        
+        let currentSongIndex = 0;
+
+        function loadSong(songIndex) {
+            const songData = songs[songIndex];
+            song.src = songData.src;
+            songTitle.textContent = songData.title;
+            artistName.textContent = songData.artist;
+            song.load();
+        }
+
+        song.onloadeddata = function(){
+            progress.max = song.duration;
+            progress.value = song.currentTime;
+        }
+
+        function playPause(){
+            if (ctrlIcon.classList.contains('ri-pause-fill')) {
+                song.pause()
+                ctrlIcon.classList.remove("ri-pause-fill")
+                ctrlIcon.classList.add("ri-play-fill")
+            }else{
+                song.play()
+                ctrlIcon.classList.remove("ri-play-fill")
+                ctrlIcon.classList.add("ri-pause-fill")
+            }
+        }
+
+        if(song.play()){
+            setInterval(()=>{
+                progress.value = song.currentTime
+            },500)
+        }
+
+        progress.onchange = function () {
+            song.currentTime = progress.value
+            if (song.paused) {
+                song.play()
+                ctrlIcon.classList.add("ri-pause-fill")
+                ctrlIcon.classList.remove ("ri-play-fill")
+            }
+        }
+
+        loadSong(currentSongIndex);
+
+        prevButton.addEventListener('click',function(){
+            currentSongIndex = (currentSongIndex - 1 + songs.length)% songs.length
+            loadSong(currentSongIndex)
+            if(!song.play()){
+                song.play()
+            }
+            ctrlIcon.classList.remove("ri-play-fill");
+            ctrlIcon.classList.add("ri-pause-fill");
+        })
+        nextButton.addEventListener('click', function() {
+            currentSongIndex = (currentSongIndex + 1) % songs.length;
+            loadSong(currentSongIndex);
+            if (!song.play()) {
+                song.play();
+            }
+            ctrlIcon.classList.remove("ri-play-fill");
+            ctrlIcon.classList.add("ri-pause-fill");
+        });
+
+        song.addEventListener('ended', function() {
+             nextButton.click();
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Create</h2>
+        <h1>Strong Password</h1>
+        <div class="display">
+            <input type="text" id="password" placeholder="Password">
+            <i class="ri-file-copy-line" onclick="copyPass()"></i>
+        </div>
+
+        <button onclick="generatePassword()">
+            <i class="ri-brain-line"></i>
+            Generate Password
+        </button>
+        
+    </div>
+</body>
+<script>
+    const password =  document.getElementById('password');
+    const length = 8;
+    const allPlaces = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789@_.-&$'
+
+    function generatePassword() {
+        let newPass = ''
+        while (length>newPass.length) {
+            newPass += allPlaces[Math.floor(Math.random()*allPlaces.length)]
+        }
+        password.value = newPass
+    }
+
+    function copyPass() {
+        password.select()
+        document.execCommand('copy')
+    }
+</script>
+</html>

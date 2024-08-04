@@ -1,0 +1,1005 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+.main{
+    height: 100%;
+    width: 100%;
+}
+
+.nav{
+    height: 12%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.logo h2{
+    font-size: 2.2vw;
+}
+.options{
+    display: flex;
+}
+.options h4{
+    font-size: 1.2vw;
+    padding-left: 35px;
+    color: #3b3b3b;
+}
+.options select{
+    font-size: 1.2vw;
+    border: none;
+    background-color: #f4f4f4;
+
+}
+.buttons{
+    display: flex;
+    gap: 25px;
+}
+.buttons button{
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0.04vw;
+
+}
+.normal-button{
+    border: 2px solid;
+    border-image: linear-gradient(150deg ,#B56AFF ,#F488B5) 1;
+    background-color: transparent;
+    border-radius: 6px ;
+}
+.filled-button{
+    background: linear-gradient( 150deg,#B56AFF ,#F488B5);
+    border: none;
+    color: white;
+}
+.nav i{
+    display: none;
+}
+.nav i:hover{
+    color:#c43aff;
+    font-weight: 900;
+}
+
+.explore{
+    height:36vw;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.text{
+    height: 100%;
+    width: 50%;
+    margin-top:4vw ;
+
+}
+.text h1{
+    font-size: 3.8vw;
+    letter-spacing: 0.07vw;
+    padding-left:11vw;
+    padding-right: 8vw;
+}
+.text p{
+    font-size: 1.2vw;
+    padding:1.8vw 0;
+    padding-left:11vw ;
+    padding-right: 4vw;
+    line-height: 22px;
+
+}
+.button-fill{
+    margin-left:11vw ;
+    padding: 10px 16px;
+    border-radius: 6px;
+    font-size: 1vw;
+    font-weight: 600;
+    letter-spacing: 0.04vw;
+    background: linear-gradient( 150deg,#B56AFF ,#F488B5);
+    border: none;
+    color: white;
+}
+.info{
+    display: inline;
+    margin-left: 2.5vw;
+}
+.info i{
+    font-size: 2vw;
+    color:#c43aff;
+    border: 1px double ;
+    border-radius: 50%;
+}
+.info a{
+    font-size: 1.2vw;
+    padding-left: 5px;
+    color: black;
+}
+
+
+.image{
+    height: 100%;
+    width: 50%;
+}
+.image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.circle{
+    height: 32vw;
+    width: 32vw;
+    background: linear-gradient( 150deg,#B56AFF ,#F488B5);
+    border-radius: 50%;   
+    position: absolute;
+    border: 1.3vw double white;
+}
+
+.image img{
+    position: relative;
+    height: 100%;
+}
+.tag-1{
+    position:absolute;
+    display: flex;
+    align-items: center;
+    background-color: rgba(245, 245, 245,0.8);
+    height: 5vw;
+    width: 14vw;
+    border-radius: 8px;
+    margin-left: -25vw;
+    margin-top: 15vw;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8);
+
+}
+.tag-1 i{
+    font-size: 1.6vw;
+    padding: 5px;
+    background-color: #B56AFF;
+    color: white;
+    border-radius: 56%;
+    margin: 1vw;
+}
+.tag-1 h4{
+    color: #B56AFF;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.tag-1 p{
+    font-size: 1.3vw;
+}
+.tag-2 p{
+    font-size: 1.3vw;
+}
+
+.tag-2{
+    position: absolute;
+    align-items: center;
+    display: flex;
+    background-color: rgba(245, 245, 245,0.8);
+    height: 5vw;
+    width: 14vw;
+    border-radius: 8px;
+    margin-left: 24vw;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.8);
+
+}
+.tag-2 i{
+    font-size: 1.6vw;
+    padding: 5px;
+    background-color: #B56AFF;
+    color: white;
+    border-radius: 56%;
+    margin: 1vw;
+}
+.tag-2 h4{
+    color: #B56AFF;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+
+.companies{
+    height: 12%;
+    background: linear-gradient( 175deg,#B56AFF ,#F488B5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    overflow: hidden;
+
+}
+.each{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+.each i{
+    font-size: 25px;
+}
+
+.courses{
+    height: 45vw;
+    width: 100%;
+}
+.courses h2{
+    margin-top: 3vw;
+    font-size: 2.3vw;
+    text-align: center;
+}
+.courses-search{
+    height: 1.8vw;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5vw;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 4px;
+}
+
+
+.courses-search i{
+    font-size: 1.6vw;
+    padding: 5px 14px;
+
+}
+.courses-search input{
+    height: 2.4vw;
+    width: 25vw;
+    border: none;
+    border-radius: 4px;
+    background-color: #fff;
+    margin-left: 5px;
+    padding-left: 10px;
+
+}
+.courses-search button{
+    margin-left: 20px;
+}
+
+.benefits-page{
+    height:34vw;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+.benefits-images{
+    margin-top: 5vw;
+    height: 100%;
+    width: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.img-grp{
+    height: 32vw;
+    width: 32vw;
+    padding: 5px;
+    border: 4px dashed #F488B5;
+    border-radius: 8vw;
+    overflow: hidden;
+}
+.img-row{
+    height: 50%;
+    width: 100%;
+    display: flex;
+}
+.img1{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-left-radius: 8vw;
+    border-bottom-right-radius: 8vw;
+}
+.img2{
+    height: 100%;
+    width: 50%;
+    object-fit: cover;
+    overflow: hidden;
+    border-top-right-radius: 8vw;
+    border-bottom-left-radius: 8vw;
+}
+.img-grp img{
+    height: 100%;
+}
+.our-benefits{
+    height: 100%;
+    width: 35%;
+    margin-top: 5vw;
+}
+.our-benefits h3{
+    font-size: 2.3vw;
+}
+.our-benefits span{
+    color: #c43aff;
+}
+.benefits{
+    display: flex;
+    align-items: center;
+    margin-top: 2vw;
+}
+.benefits i{
+    font-size: 1.8vw;
+    margin-right: 1.5vw;
+    color: white;
+    background-color: #B56AFF;
+    border-radius: 50%;
+    padding: 8px;
+}
+.benefit-text h4{
+    font-size: 1.4vw;
+    margin-bottom: 0.5vw;
+    color: black;
+}
+.benefit-text{
+    font-size: 1vw;
+    color: #3b3b3b;
+}
+
+.popular-courses{
+    height: auto;
+    width: 100%;
+    background: linear-gradient( 175deg,#B56AFF ,#F488B5);
+}
+.popular-text{
+    color: white;
+    height: 30%;
+    padding: 4vw;
+}
+.popular-text h2{
+    font-size: 2.3vw;
+    text-align: center;
+}
+.popular-text p{
+    padding-top: 10px;
+    text-align: center;
+    font-size: 1vw;
+}
+.course-view{
+    height: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.course-pic {
+    padding: 8px;
+    overflow: hidden;
+    height: 45%;
+}
+.course-pic img {
+    border-radius: 5%;
+    height: 100%;
+    width: 100%;
+}
+.course-info{
+    background-color: white;
+    height: 390px;
+    width: 290px;
+    border-radius: 5%;
+    margin: 20px;
+}
+.course-name{
+    height: 5%;
+    font-size: 13px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    padding-left: 10px;
+}
+.list-name{
+    background-color: #dfc0ff;
+    padding-left: 20px;
+    padding-right: 7px;
+}
+.list-rating{
+    background-color: #B56AFF;
+    color: white;
+    padding-left: 20px;
+    padding-right: 7px;
+}
+.full-info{
+    height: 35%;
+    width: 70%;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 15px;
+}
+.student-class{
+    display: flex;
+    justify-content: space-between;
+
+}
+.detail{
+    display: flex;
+    font-size:12px;
+    align-items: center;
+    gap: 3px;
+}
+.detail i{
+    font-size: 15px;
+    color: #B56AFF;
+}
+.course-price{
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 10px;
+    border-top: 1px solid rgb(151, 151, 151);
+
+}
+.course-teacher{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 13px;
+    color: #B56AFF;
+    font-weight: 600;
+
+}
+.course-teacher i{
+    font-size: 18px;
+    color: rgb(47, 47, 47);
+}
+
+.contact-us{
+    height: auto;
+    width: 100%;
+    background: linear-gradient( 175deg ,#F488B5 ,#B56AFF);
+}
+.getintouch{
+    height: 21vw;
+    width: 100%;
+    background-color: #fff;
+    border-top-left-radius: 8vw;
+    border-bottom-right-radius: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.getintouch-box{
+    background: linear-gradient( 175deg ,#B56AFF ,#F488B5 );
+    height: 14vw;
+    width: 45vw;
+    border-radius: 2vw;
+    text-align: center;
+    color: white;
+    margin: 0 20px;
+
+}
+.getintouch-box h4{
+    font-size: 2.1vw;
+    font-weight: 550;
+    padding-top: 1.2vw;
+}
+.getintouch-box p{
+    font-size: 1vw;
+    padding: 0 9vw;
+}
+.input-email{
+    margin-top: 1.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-email input{
+    font-size: 1.2vw;
+    border: none;
+    border-radius: 8px;
+    height: 3vw;
+    width: 24vw;
+    padding-left: 10px;
+}
+.subscribe-button{
+    height: 3vw;
+    width: 8vw;
+    border-radius: 8px;
+    margin-left: 1.4vw;
+    background-color: #fff;
+    display: inline;
+    align-items: center;
+    
+}
+.input-email button{
+    border: none;
+    height: 3vw;
+    width: 8vw;
+    border-radius: 8px;
+    background: -webkit-linear-gradient( 175deg ,#F488B5 ,#B56AFF);
+    background-clip: auto;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-size: 1.3vw;
+    font-weight: 600;
+}
+.others{
+    height: auto;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    margin-top: 3vw;
+}
+.edtech{
+    width: 15%;
+    padding-bottom: 2vw;
+}
+.edtech h3{
+    font-size: 2.5vw;
+}
+.edtech p{
+    font-size: 1vw;
+    padding: 0.8vw 0;
+}
+.edtech i{
+     font-size: 1.2vw;
+}
+.others-list h4{
+    font-size: 1.5vw;
+}
+.others-list ul{
+    font-size: 1vw;
+    padding: 0.8vw 0;
+}
+.copyright {
+    height: auto;
+    text-align: center;
+    font-size: 0.9vw;
+    color: white;
+    border-top: 0.8px solid rgba(255, 255, 255, 0.653);
+    padding: 2vw 0;
+}
+
+@media (max-width:800px) {
+    .nav{
+        justify-content:space-evenly;
+    }
+    .companies{
+        height: 70px;
+    }
+    .logo h2{
+        font-size: 5vw;
+    }
+    .nav button{
+        font-size:1.8vw;
+    }
+    .options{
+        display: none;
+    }
+    .nav i{
+        display: initial;
+        font-size: 5vw;
+        font-weight: 700;
+    }
+    .explore{
+        height: 60%;
+    }
+    .text{
+        overflow: wrap;
+    }
+    .text h1{
+        font-size: 4.8vw;
+    }
+    .text p{
+        font-size: 1.7vw;
+        width: 90%;
+    }
+    .text button{
+        font-size: 2vw;
+    }
+    .circle{
+        height: 300px;
+        width: 300px;
+    }
+    .info{
+        display:block;
+        margin-left:11vw;
+        margin-top: 10px;
+    }
+    .info i{
+        font-size: 3vw;
+    }
+    .text a{
+        font-size: 2vw;
+    }
+    #each-3{
+        display: none;
+    }
+    #each-4{
+        display: none;
+    }
+    .benefits-page{
+        flex-direction: column;
+    }
+    .courses{
+        height: 100%;
+    }
+    .courses h2{
+        margin-top: 4vw;
+        font-size: 5vw;
+        margin-bottom: 3vw;
+    }
+    .courses-search{
+        height: 3vw;
+        width: 100%;
+    }
+    .search-box{
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+    }
+    .courses-search i{
+        font-size: 3vw;
+        padding: 5px 14px;
+    
+    }
+    .courses-search input{
+        height: 3.5vw;
+        width: 50vw;
+    }
+    .courses-search button{
+        margin-left: 20px;
+        font-size: 2vw;
+    }
+
+    .benefits-page{
+        height:90%;
+        width: 100%;
+    }
+    .benefits-images{
+        height: 50%;
+        width: 100%;
+    }
+    .img-grp{
+        height: 250px;
+        width: 250px;
+    }
+    .our-benefits{
+        height: 70%;
+        width: 100%;
+        overflow: wrap;
+        margin: 0;
+        padding-left:10vw ;
+    }
+    .our-benefits h3{
+        font-size: 30px;
+
+    }
+    .benefits{
+        margin-top: 15px;
+        width: 90%;
+
+    }
+    .benefits i{
+        font-size: 25px;
+    }
+    .benefit-text h4{
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    .benefit-text{
+        font-size: 10px;
+    }
+    .popular-text h2{
+        font-size: 4vw;
+    }
+    .popular-text p{
+        font-size: 1.8vw;
+    }
+
+    .getintouch{
+        height: 200px;
+    }
+    .getintouch-box{
+        height: 145px;
+        width: 440px;
+        border-radius: 15px;
+    }
+    .getintouch-box h4{
+        font-size: 22px;
+        padding-top: 16px;
+    }
+    .getintouch-box p{
+        font-size: 12px;
+        padding: 0 72px;
+    }
+    .input-email{
+        margin-top: 16px;
+
+    }
+    .input-email input{
+        font-size: 12px;
+        height: 32px;
+        width: 233px;
+    }
+    .subscribe-button{
+        height: 32px;
+        width: 83px;
+        margin-left: 16px;
+    }
+    .input-email button{
+        height: 32px;
+        width: 83px;
+        font-size: 12px;
+    }
+
+    .edtech h3{
+        font-size: 3.4vw;
+    }
+    .edtech p{
+        font-size: 1.3vw;
+    }
+    .edtech i{
+         font-size: 1.5vw;
+    }
+    .others-list h4{
+        font-size: 2vw;
+    }
+    .others-list ul{
+        font-size: 1.3vw;
+        padding: 0.8vw 0;
+    }
+    .copyright {
+        height: auto;
+        font-size: 1.2vw;
+    }
+}
+
+
+@media (max-width:600px) {
+    
+    .nav{
+        justify-content: space-between;
+        padding: 8vw;
+        height: 9%;
+    }
+    .logo h2{
+        font-size: 7vw;
+    }
+    .buttons{
+        display: none;
+    }
+    .nav i{
+        display: initial;
+        font-size: 6vw;
+        font-weight: 700;
+    }
+    .explore{
+        flex-direction: column;
+        height: 82%;
+    }
+    .companies{
+        height: 9%;
+    }
+    .text{
+        height: 50%;
+        overflow: wrap;
+    }
+    .image{
+        height: 50%;
+        width: 100%;
+        overflow: hidden;
+    }
+    .circle{
+        height: 200px;
+        width: 200px;;
+    }
+    .image img{
+        height: 100%;
+    }
+    .tag-1{
+        height: 10vw;
+        width: 23vw;
+    }
+    .tag-1 i{
+        font-size: 3.5vw;
+    }
+    .tag-1 h4{
+        font-size: 3vw;
+    }
+    .tag-1 p{
+        font-size: 2.3vw;
+    }
+    .tag-2 p{
+        font-size: 2.3vw;
+    }
+    
+    .tag-2{
+        height: 10vw;
+        width: 23vw;
+        margin-left: 37vw;    
+    }
+    .tag-2 i{
+        font-size: 3.5vw;
+
+    }
+    .tag-2 h4{
+        color: #B56AFF;
+        font-size: 3vw;
+        font-weight: 700;
+    }
+
+    .text{
+        margin-top: 1vw;
+        width: 100%;
+        height: 50%;
+        text-align: center;
+    }
+    .text h1{
+        font-size: 0px;
+    }
+    .text h1::before{
+        content: 'Develop your skills in a new & unique way';
+        font-size: 45px;
+    }
+   
+    .text p{
+        font-size: 14px;
+        margin: 10px 0;
+    }
+    .text button{
+        font-size: 4vw;
+        font-weight: 600;
+        margin-left: 4px;
+    }
+    .info{
+        display: initial;
+        margin-left: 8px;
+    }
+    .info i{
+        font-size: 5vw;
+    }
+    .info a{
+        font-size: 3.6vw;
+    }
+    .courses{
+        height: 100%;
+    }
+    .courses h2{
+        margin-top: 4vw;
+        font-size: 6vw;
+        margin-bottom: 7vw;
+    }
+    .courses-search{
+        height: 3vw;
+        width: 100%;
+        margin-top: 1.5vw;
+    }
+    .search-box{
+        display: flex;
+        align-items: center;
+        border-radius: 4px;
+    }
+    .courses-search i{
+        font-size: 4.3vw;
+        padding: 5px 14px;
+    
+    }
+    .courses-search input{
+        height: 3.4vw;
+        width: 50vw;
+    }
+    .courses-search button{
+        margin-left: 20px;
+        font-size: 2.9vw;
+    }
+
+    .benefits-page{
+        height:90%;
+        width: 100%;
+    }
+    .benefits-images{
+        height: 50%;
+        width: 100%;
+    }
+    .img-grp{
+        height: 250px;
+        width: 250px;
+    }
+    .our-benefits{
+        height: 70%;
+        width: 100%;
+        overflow: wrap;
+        margin: 0;
+        padding-left:10vw ;
+    }
+    .our-benefits h3{
+        font-size: 30px;
+
+    }
+    .benefits{
+        margin-top: 15px;
+        width: 90%;
+
+    }
+    .benefits i{
+        font-size: 25px;
+    }
+    .benefit-text h4{
+        font-size: 20px;
+        margin-bottom: 6px;
+    }
+    .benefit-text{
+        font-size: 10px;
+    }
+    .popular-text h2{
+        font-size: 6vw;
+    }
+    .popular-text p{
+        font-size: 2.4vw;
+    }
+
+
+    .getintouch{
+        height: 200px;
+    }
+    .getintouch-box{
+        height: 140px;
+        width: 410px;
+        border-radius: 15px;
+    }
+    .getintouch-box h4{
+        font-size: 20px;
+        padding-top: 13px;
+    }
+    .getintouch-box p{
+        font-size: 10px;
+        padding: 0 42px;
+    }
+    .input-email{
+        margin-top: 16px;
+
+    }
+    .input-email input{
+        font-size: 12px;
+        height: 32px;
+        width: 200px;
+    }
+    .subscribe-button{
+        height: 32px;
+        width: 73px;
+        margin-left: 12px;
+    }
+    .input-email button{
+        height: 32px;
+        width: 73px;
+        font-size: 12px;
+    }
+
+    .edtech h3{
+        font-size: 3.8vw;
+    }
+    .edtech p{
+        font-size: 1.6vw;
+    }
+    .edtech i{
+         font-size: 1.8vw;
+    }
+    .others-list h4{
+        font-size: 2.5vw;
+    }
+    .others-list ul{
+        font-size: 1.6vw;
+        padding: 1vw 0;
+    }
+    .copyright {
+        height: auto;
+        font-size: 1.6vw;
+    }
+}

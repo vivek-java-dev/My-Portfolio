@@ -40,9 +40,21 @@ header{
 
 .nav ul{
     display: flex;
-    gap: 3vw;    
     list-style-type: none;
     font-size: 14px;
+    gap: 2vw;
+}
+.icons{
+    display: flex;
+    font-size: 14px;
+    gap: 2.4vw;
+}
+
+.menu-icon{
+    display: none;
+}
+.dark-icon{
+    display: none;
 }
 
 .nav i{
@@ -54,7 +66,6 @@ header{
 
 .left-right{
     display: flex;
-    /* justify-content: space-between; */
 }
 
 
@@ -64,6 +75,8 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-left:3vw ;
+
 }
 .left h1{
     color: #ffc86b;
@@ -87,6 +100,11 @@ header{
     letter-spacing: 1px;
     cursor: pointer;
 }
+.resume-btn:hover {
+    background-color: #ffc86b;
+    color: white;
+    font-weight: 600;
+}
 
 .right{
     height:45vw ;
@@ -97,18 +115,18 @@ header{
     margin: 20px;
     text-align: center;
 }
-.contact-icons li{
+.welcome-msg li{
     margin-top: 20px;
 }
 .line{
     height: 50px;
     border: 2px solid #ffc86b;
     width: 0;
-    margin-left: 6px;
+    margin-left: 12px;
 
 }
 
-.contact-icons{
+.welcome-msg{
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -119,6 +137,7 @@ header{
 .right img{
     height: 100%;
     border-right: 1px solid #ffc86b;
+    margin-left: 2.3vw;
 }
 /* *****About Me ****** */
 
@@ -177,6 +196,9 @@ header{
     box-shadow: 7px 10px 10px 0px #222 ;
 
 }
+.skills img:hover{
+    background-color: #ffc86b;
+}
 
 /* ******projects****** */
 
@@ -208,6 +230,7 @@ header{
   }
   
   .carousel-item {
+    position: relative;
     min-width: 100%;
     box-sizing: border-box;
 
@@ -223,11 +246,47 @@ header{
   }
   .carousel-item p{
     margin-top: 6px;
+    font-size: 1.2vw;
   }
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24vw;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .carousel-item:hover .overlay {
+    opacity: 1;
+  }
+  .open-project,
+    .github-link {
+      background: #fff;
+      border: none;
+      border-radius: 50px;
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .open-project:hover,
+    .github-link:hover {
+      background: #ffc86b;
+      color: #fff;
+      font-weight: 600;
+    }
   
   .carousel-btn {
     position: absolute;
-    top: 50%;
+    top: 47%;
     transform: translateY(-50%);
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
@@ -235,6 +294,7 @@ header{
     border-radius: 10px;
     padding: 0.5rem;
     cursor: pointer;
+    font-size: 1vw;
   }
   
   .left-btn {
@@ -246,13 +306,14 @@ header{
   }
   .projects span{
     position: absolute;
-    top: 80%;
+    top: 74%;
     transform: translateX(-50%);
     background-color: rgba(0, 0, 0, 0.4);
     color: #fff;
     border: none;
     border-radius: 10px;
     padding: 0.4rem;
+    font-size: 1vw;
     display: none;
   }
   
@@ -277,10 +338,9 @@ header{
     text-align: center;
     margin: 20px 0;
     padding: 40px;
-    /* background-color: #444;  */
     color: #fff; 
-    border-top: 2px solid #ffa500;
-    border-bottom: 2px solid #ffa500;
+    border-top: 2px solid #ffc86b;
+    border-bottom: 2px solid #ffc86b;
   }
   
   .contact-details {
@@ -302,12 +362,202 @@ header{
     border-radius: 5px;
     background-color: #444;
     cursor: pointer;
+    color: #ffc86b;
+
   }
   
   .contact-item i {
     font-size: 1.5rem;
+    color: #fff;
   }
   
-.contact-item span{
-    color: #ffc86b;
+.contact-item:hover{
+    background-color: #ffc86b;
+    color: white;
+}
+
+
+@media (max-width:825px){
+    .nav{
+        height: 6vw;
+    }
+
+    .menu-icon{
+        display: inline;
+    }
+    .nav-btns li{
+        display: none;
+    }
+    .left-right{
+        justify-content: space-between;
+    }
+    .left{
+        height: 60vw;
+        padding-left:5vw ;
+    } 
+    .right{
+        height: 60vw;
+    }
+    .welcome-msg{
+        display: none;
+    }
+    .right img{
+        border: none;
+    }
+    .left h1{
+        font-size: 36px;
+    }
+    .left h2{
+        font-size: 24px;
+    }
+    .left p{
+        font-size: 15px;
+    }
+    .left button{
+        font-size: 15px;
+    }
+    .carousel-container{
+        max-width: 68vw;
+    }
+    .carousel-item img{
+        height: 35vw;
+    }
+    .overlay{
+        height: 35vw;
+    }
+    .carousel-item p{
+        font-size:2vw;
+    }
+    .carousel-btn{
+        font-size: 1.6vw;
+    }
+    .projects span{
+        top: 70%;
+        font-size: 1.6vw;
+    }
+    .contact-details{
+        width: 70%;
+    }
+}
+@media (max-width:600px){
+    h1{
+        font-size: 26px;
+    }
+    .about-me h1{
+        font-size: 26px;
+        margin-top: 20px;
+
+    }
+    
+    .nav{
+        height: 10vw;
+        padding-top: 10px;
+    }
+    .nav h1{
+        font-size: 25px;
+    }
+    .menu-icon{
+        display: inline;
+    }
+    .nav-btns li{
+        display: none;
+    }
+    .icons i{
+        font-size: 18px;
+
+    }
+    header{
+        height: 100%;
+    }
+    .left-right{
+        justify-content: space-between;
+        flex-direction: column;
+        height: 100%;
+        overflow: hidden;
+    }
+    .left{
+        height: 100%;
+        width: 100%;
+        padding:25px;
+        padding-bottom: 0;
+        margin-top: 20px;
+    } 
+    .right{
+        height: 450px;
+        width: 100%;
+        overflow-x: hidden;
+        overflow-y:auto;
+    }
+    .welcome-msg{
+        display: none;
+    }
+    .right img{
+        height: 100%;
+        border: none;
+        margin-left: auto;
+    }
+    .left h1{
+        font-size: 36px;
+    }
+    .left h2{
+        font-size: 24px;
+    }
+    .left p{
+        font-size: 15px;
+    }
+    .left button{
+        font-size: 15px;
+    }
+    .about-me p{
+    font-size: 14px;
+    }
+    .skills h1{
+        font-size: 28px;
+        margin-bottom: 60px;
+    }
+    .skills img{
+        height: 120px;
+    }
+    .projects{
+        padding: 20px;
+    }
+    .projects h2{
+        font-size: 30px;
+        margin-top:40px ;
+        margin-bottom: 30px;
+    }
+    .projects h1{
+        font-size: 29px;
+    }
+    .carousel-container{
+        max-width: 82vw;
+    }
+    .carousel-item img{
+        height: 44vw;
+    }
+    .overlay{
+        height: 44vw;
+    }
+    .carousel-item p{
+        font-size:3.4vw;
+    }
+    .carousel-btn{
+        font-size: 2.2vw;
+    }
+    .projects span{
+        top: 67%;
+        font-size: 2.2vw;
+    }
+    footer{
+        padding: 0;
+    }
+    .contact-item{
+        padding: 5px 10px;
+    }
+    .contact-item i {
+        font-size: 1.2rem;
+      }
+    .contact-item span {
+        font-size: 0.8rem;
+      }
 }
