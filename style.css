@@ -4,10 +4,15 @@
     font-family: sans-serif ;
     box-sizing: border-box;
 }
+html {
+    scroll-behavior: smooth;
+  }
+  
 body{
     color: white;
     background: #444;
 }
+
 h1{
     font-family:'Times New Roman', Times, serif;
     letter-spacing: 1.6px;
@@ -44,16 +49,70 @@ header{
     font-size: 14px;
     gap: 2vw;
 }
+.nav a{
+    text-decoration: none;
+    color: white;
+}
 .icons{
     display: flex;
     font-size: 14px;
     gap: 2.4vw;
 }
 
-.menu-icon{
-    display: none;
+
+#toastBox{
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    overflow: hidden;
+    padding: 20px;
 }
-.dark-icon{
+
+.toast{
+    width: 400px;
+    height: 80px;
+    background: #fff;
+    font-weight: 500;
+    color: #000;
+    /* margin: 15px 0; */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    position: relative;
+    transform: translateX(100%);
+    animation:  moveleft 0.5s linear forwards;
+    
+}
+@keyframes moveleft{
+    100%{
+        transform: translateX(0);
+    }
+}
+.toast i{
+    margin:  0 20px;
+    font-size: 35px;
+    color: green;
+}
+.toast::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background-color: green;
+    animation:  anim 5s linear forwards;
+}
+@keyframes anim{
+    100%{
+        width: 0;
+    }
+}
+
+.menu-icon{
     display: none;
 }
 
@@ -112,7 +171,7 @@ header{
 }
 .right ul{
     list-style-type: none;
-    margin: 20px;
+    margin: 10px;
     text-align: center;
 }
 .welcome-msg li{
@@ -137,7 +196,7 @@ header{
 .right img{
     height: 100%;
     border-right: 1px solid #ffc86b;
-    margin-left: 2.3vw;
+    margin-left: 4vw;
 }
 /* *****About Me ****** */
 
@@ -377,6 +436,34 @@ header{
 }
 
 
+/****************** sidebar ****************/
+
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background: #66666648;
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    visibility:hidden;
+    
+}
+.sidebar i {
+    width: 100%;
+}
+.sidebar a{
+    width: 100%;
+    margin-top: 35px;
+    padding: 0 30px;
+}
+
+
 @media (max-width:825px){
     .nav{
         height: 6vw;
@@ -465,6 +552,16 @@ header{
     .icons i{
         font-size: 18px;
 
+    }
+    .toast{
+        width: 250px;
+        height: 45px;
+        font-size: 16px;
+    }
+    .toast i{
+        margin:  0 20px;
+        font-size: 25px;
+        color: green;
     }
     header{
         height: 100%;

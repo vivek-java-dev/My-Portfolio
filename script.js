@@ -30,7 +30,7 @@ function initCarousel(slideSelector, leftBtnSelector, rightBtnSelector,counterSe
     function updateCarousel() {
       slide.style.transform = `translateX(-${currentIndex * 100}%)`;
       span.style.display = 'initial'
-      span.innerHTML = `${currentIndex+1}/${totalItems}`
+      span.innerHTML = `${currentIndex+1} / ${totalItems}`
     }
   }
   
@@ -48,6 +48,8 @@ function linkedinProfile(){
 function githubProfile(){
     window.open("https://github.com/vivek-java-dev","_blank")
 }
+
+
 //******download Resume ******
 
 document.querySelector(".resume-btn").addEventListener("click", function() {
@@ -59,6 +61,8 @@ document.querySelector(".resume-btn").addEventListener("click", function() {
   link.click();
   document.body.removeChild(link);
 });
+
+
 
 //**********project link********** */
 
@@ -76,13 +80,86 @@ function setupProjectButtons(containerClass, projectType) {
 
     githubLinkButton.onclick = () => {
 
-      window.open(`https://github.com/user/${projectType}_project${index + 1}`, '_blank');
+      window.open(`https://github.com/vivek-java-dev/My-Portfolio/tree/main/projects/${projectType}/project${index + 1}`, '_blank');
     };
   });
 }
 
-// Setup buttons for HTML/CSS projects
 setupProjectButtons('.carousel-container.html-css', 'html-css');
 
-// Setup buttons for JavaScript projects
 setupProjectButtons('.carousel-container.js', 'js');
+
+//*****************Scrolling between sections******************** */
+
+document.querySelectorAll('.nav-btns a').forEach(anchor => {
+  anchor.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor click behavior
+
+    const targetID = this.getAttribute('href'); // Get the target ID
+    document.querySelector(targetID).scrollIntoView({
+      behavior: 'smooth' // Smooth scroll behavior
+    });
+  });
+});
+document.querySelectorAll('.sidebar a').forEach(anchor => {
+  anchor.addEventListener('click', function(event) {
+    event.preventDefault(); // Prevent default anchor click behavior
+
+    const targetID = this.getAttribute('href'); // Get the target ID
+    document.querySelector(targetID).scrollIntoView({
+      behavior: 'smooth' // Smooth scroll behavior
+    });
+  });
+});
+
+//****************notification********/
+
+document.addEventListener("DOMContentLoaded", function() {
+  const shareIcon = document.querySelector(".share-icon");
+  const resumeBtn = document.querySelector(".resume-btn");
+
+
+  shareIcon.addEventListener("click", function() {
+    const url = window.location.href;
+
+    navigator.clipboard.writeText(url).then(function() {
+      showToast('URL copied successfuly!');
+    }).catch(function(err) {
+      console.error("Failed to copy URL: ", err);
+    });
+  });
+
+  resumeBtn.addEventListener("click", function() {
+    const url = window.location.href;
+
+    navigator.clipboard.writeText(url).then(function() {
+      showToast('Resume Downloaded');
+    }).catch(function(err) {
+      console.error("Failed to copy URL: ", err);
+    });
+
+});
+});
+
+function showToast(msg){
+  let toast = document.createElement('div')
+  toast.classList.add('toast')
+  toast.innerHTML = `<i class="ri-checkbox-circle-fill"></i> ${msg}`
+  toastBox.appendChild(toast)
+
+  setTimeout(() => {
+    toast.remove();
+  }, 5000);
+
+}
+
+//sidebar
+
+function showSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.visibility = 'visible'
+}
+function hideSidebar(){
+  const sidebar = document.querySelector('.sidebar')
+  sidebar.style.visibility = 'hidden'
+}

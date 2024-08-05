@@ -14,19 +14,28 @@
         <nav class="nav">
             <h1>Portfolio</h1>
             <ul class="nav-btns">
-                <li>Home</li>
-                <li>About Me</li>
-                <li>Skills</li>
-                <li>Projects</li>
-                <li>Contact Us</li>
+              <li><a href="header">Home</a></li>
+              <li><a href=".about-me">About Me</a></li>
+              <li><a href=".skills">Skills</a></li>
+              <li><a href=".projects">Projects</a></li>
+              <li><a href="footer">Contact Us</a></li>
+            </ul>
+            <ul class="sidebar">
+                <a href=""><i class="ri-menu-4-line cross-icon " onclick="hideSidebar()"></i></a>
+              <li><a href="header">Home</a></li>
+              <li><a href=".about-me">About Me</a></li>
+              <li><a href=".skills">Skills</a></li>
+              <li><a href=".projects">Projects</a></li>
+              <li><a href="footer">Contact Us</a></li>
             </ul>
             <div class="icons">
-                <i class="ri-contrast-2-line dark-icon"></i>
-                <i class="ri-sun-line sun-icon"></i>
                 <i class="ri-share-line share-icon"></i>
-                <i class="ri-menu-4-line menu-icon"></i>
+                <i class="ri-menu-4-line menu-icon" onclick="showSidebar()"></i>
             </div>
         </nav>
+
+        <div id="toastBox"></div>
+
 
         <section class="left-right">
             <div class="left">
