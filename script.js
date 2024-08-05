@@ -155,11 +155,12 @@ function showToast(msg){
 
 //sidebar
 
-function showSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.visibility = 'visible'
+function showSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.add('active');
 }
-function hideSidebar(){
-  const sidebar = document.querySelector('.sidebar')
-  sidebar.style.visibility = 'hidden'
+
+function hideSidebar() {
+  const sidebar = document.querySelector('.sidebar');
+  sidebar.classList.remove('active');
 }
